@@ -11,7 +11,7 @@ st.write("Enter patient details below to predict risk of heart disease.")
 
 # Load model
 BASE_DIR = os.path.dirname(__file__)
-model_path = os.path.join(BASE_DIR, "Heart_disease_model_pipeline.pkl")
+model_path = os.path.join(BASE_DIR, "HeartDisease_model_pipeline.pkl")
 
 if not os.path.exists(model_path):
     st.error(f"Model file not found at: {model_path}")
