@@ -8,7 +8,7 @@ import pickle
 import streamlit as st
 
 BASE_DIR = os.path.dirname(__file__)
-model_path = os.path.join(BASE_DIR, "Heart_diease_model_pipeline.pkl")
+model_path = os.path.join(BASE_DIR, "Heart_disease_model_pipeline.pkl")
 
 if not os.path.exists(model_path):
     st.error(f"Model file not found at: {model_path}")
