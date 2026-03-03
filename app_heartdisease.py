@@ -2,9 +2,19 @@ import streamlit as st
 import pickle
 import numpy as np
 
-# Load trained model
-with open("heart_model.pkl", "rb") as f:
-    model = pickle.load(f)
+
+import os
+import pickle
+import streamlit as st
+
+BASE_DIR = os.path.dirname(__file__)
+model_path = os.path.join(BASE_DIR, "Heart_diease_model_pipeline.pkl")
+
+if not os.path.exists(model_path):
+    st.error(f"Model file not found at: {model_path}")
+else:
+    with open(model_path, "rb") as f:
+        model = pickle.load(f)
 
 st.set_page_config(page_title="Heart Disease Predictor", page_icon="❤️")
 
